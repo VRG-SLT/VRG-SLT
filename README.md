@@ -3,10 +3,12 @@ Data shortages and the phonetic disparity between sign and spoken languages have
 
 
 ### Framework
+![image](./samples/1.png)
 VRG-SLT mainly comprises a sign-tokenizer and a sign-aware language model, SignLLM. The sign-tokenizer encodes sign actions into a sign codebook and, together with the text tokenizer, creates a unified vocabulary $V$ . Using SignLLM, we perform joint learning of sign and spoken languages for sign language translation. The two encoders of the sign-tokenizer encode global body movements and detailed hand features, respectively, achieving a comprehensive and precise understanding of sign motion. Finally, we refine the initial output using a RAG strategy.
 
 
 ### TRAINING PROCEDURES
+![image](./samples/2.png)
 VRG-SLT comprises three steps: First, sign-tokenizer learns a codebook for discrete sign representations. Next, we train the language model SignLLM using a mix of spoken and sign data to understand the semantic coupling between text and sign motion. Finally, we polish the initial output using RAG.
 
 
@@ -129,3 +131,4 @@ print("Final Translated text:", final_translation)
 ```
 
 ### Compared with state-of-the-art methods
+![image](./samples/3.png)
